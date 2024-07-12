@@ -1,0 +1,40 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class  Easy_Pronunciation
+{
+        public static void main(String[] args) throws java.lang.Exception
+        {
+                Scanner sc = new Scanner(System.in);
+                int t = sc.nextInt(); // Number of test cases
+
+                while (t-- > 0) {
+                        int n = sc.nextInt(); // Length of the string
+                        String s = sc.next(); // The input string
+
+                        int count = 0;
+                        boolean isEasyToPronounce = true;
+
+                        for (int i = 0; i < n; i++) {
+                                char ch = s.charAt(i);
+                                if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+                                        count = 0;
+                                } else {
+                                        count++;
+                                }
+
+                                if (count == 4) {
+                                        isEasyToPronounce = false;
+                                        break;
+                                }
+                        }
+
+                        if (isEasyToPronounce) {
+                                System.out.println("YES");
+                        } else {
+                                System.out.println("NO");
+                        }
+                }
+        }
+}
