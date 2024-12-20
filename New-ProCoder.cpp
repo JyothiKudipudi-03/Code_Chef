@@ -1,0 +1,23 @@
+/*   New-Pro Coder
+Hola a todos, espero que todo vaya bien!!
+Ved claims to be a pro at programming, but his friend Varun disagrees.
+To settle the debate, they decided to seek advice from their mentor. 
+The mentor proposed a simple challenge: Ved must write a program containing N lines of code.
+When the code is compiled, the compiler will indicate how many of those lines have errors, denoted as M. Based on the results:
+If errors are present in at least half of the total lines, Ved will be labeled as a NEWBIE.Otherwise, he will be called a PRO
+After compiling Ved's code, the compiler reported errors in M lines. Determine Ved's skill category based on this evaluation. */
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+        int N,M,M1;
+        cin >> N >> M;
+        M1 = (N+1)/2;
+        if(M>=M1){
+                cout << "NEWBIE";
+        } else {
+                cout << "PRO";
+        }
+}
